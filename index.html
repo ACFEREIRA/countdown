@@ -9,6 +9,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
   <title>Countdown</title>
 </head>
@@ -21,21 +22,23 @@
     <div class="container">
       <div class="countdown" id="countdown">
         <h1>READY TO LAUNCH IN...</h1>
-        <div class="time-box">
-          <span id="days"></span>
-          <span class="text">Dias</span>
-        </div>
-        <div class="time-box">
-          <span id="hours"></span>
-          <span class="text">Horas</span>
-        </div>
-        <div class="time-box">
-          <span id="minutes"></span>
-          <span class="text">Minutos</span>
-        </div>
-        <div class="time-box">
-          <span id="seconds"></span>
-          <span class="text">Segundos</span>
+        <div class="time-box-container">
+          <div class="time-box">
+            <p class="text">Dias</p>
+            <span id="days"></span>
+          </div>
+          <div class="time-box">
+            <p class="text">Horas</p>
+            <span id="hours"></span>
+          </div>
+          <div class="time-box">
+            <p class="text">Minutos</p>
+            <span id="minutes"></span>
+          </div>
+          <div class="time-box">
+            <p class="text">Segundos</p>
+            <span id="seconds"></span>
+          </div>
         </div>
         <p>Inscreva-se para saber mais sobre o lançamento</p>
         <button class="subscribe_button">Inscreva-se</button>

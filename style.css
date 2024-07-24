@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #FFFFFF;
+  --black: #4D4C59;
+  --purple: #6C63FF;
+	--light-grey: #C8C8C8;
+  --text-color: #9C9AB6;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 300, 400, 500;
+}
+
+body {
+  background-color: var(--background);
+  margin: 0;
+  padding: 0;
+}
+
+.background { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.top_image img, .bottom_image img {
+  width: 100%;
+  height: 20vh; /* 20% da altura da viewport */
+  object-fit: cover; /* Para garantir que a imagem se ajuste bem dentro do contêiner */
+}
+
+.top_image {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.bottom_image {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.container {
+  border: 2px solid blue;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  z-index: 1;
+  max-width: 90%; /* Ajuste conforme necessário */
+  background-color: rgba(255, 255, 255, 0.521); /* Fundo transparente para contraste */
+  flex-wrap: wrap;
+}
+
+.countdown {
+  border: 2px solid rgb(0, 255, 64);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-right: 30px;
+
+  flex-basis: 0;
+  flex-grow: 1;
+  min-width: 200px;
+}
+
+.countdown h1 {
+  color: var(--purple);
+  font-weight: bold;
+  font-size: 2.25rem; /*36px*/
+}
+
+.time-box-container {
+  border: 2px solid rgb(255, 123, 0);
+
+
+  display: flex;
+  gap: 1rem;
+
+}
+
+.time-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 20px;
+
+  flex-basis: 0;
+  flex-grow: 1;
+ 
+}
+
+.time-box span {
+  border: 2px solid blue;
+
+  color: var(--black);
+  font-weight: 400;
+  font-size: 4.5rem; /*72px*/
+}
+
+.time-box p {
+  color: var(--light-grey);
+  font-weight: 300;
+  font-size: 1rem; /*16px*/
+}
+
+.countdown p {
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: 1rem; /*16px*/
+}
+
+.countdown button {
+  padding: 10px 20px;
+  background: var(--purple);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.image_foguete img {
+  border: 2px solid blue;
+
+  width: 100%; 
+}
