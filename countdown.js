@@ -17,21 +17,41 @@ function contagemRegressiva() {
   const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
 
   document.getElementById('days').innerText = dias;
-  document.getElementById('hours').innerText = horas;
-  document.getElementById('minutes').innerText = minutos;
-  document.getElementById('seconds').innerText = segundos;
+  document.getElementById('hours').innerText = horas.toString().padStart(2, '0');
+  document.getElementById('minutes').innerText = minutos.toString().padStart(2, '0');
+  document.getElementById('seconds').innerText = segundos.toString().padStart(2, '0');
 
   if (distancia < 0) {
-    clearInterval(contagemRegressiva);
-    document.querySelector('.contdown').innerHTML = "<h1>Já estamos no ar!</h1>";
+    clearInterval(intervalId);
+    document.querySelector('.countdown').innerHTML = "<h1>Já estamos no ar!</h1>";
   }
 }
 
+let intervalId;
+
 function iniciarContagem() {
   contagemRegressiva();
-  setInterval(contagemRegressiva, 1000);
+  intervalId = setInterval(contagemRegressiva, 1000);
 }
 
 document.addEventListener('DOMContentLoaded', (event) => {
   iniciarContagem();
 })
+
+// Modal //
+
+function toggleModal() {
+  const modal = document.getElementById('subscribe_modal');
+  if (modal.style.display === 'flex') {
+    modal.style.display = 'none';
+  } else {
+    modal.style.display = 'flex';
+  }
+}
+
+document.getElementById('subscribe_form').addEventListener('submit', function (event) {
+  event.preventDefault();
+  const name = document.getElementById('name').value;
+  alert('Obrigado sr(a) ' + name + ', os seus dados foram encaminhados com sucesso!');
+  toggleModal();
+});
