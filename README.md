@@ -36,4 +36,7 @@ O desafio foi construir uma  página de `coming` soon para o lançamento de um s
 
 ## 📺 Tela
 
+https://github.com/user-attachments/assets/f4ff6069-aec5-40d3-a6f4-81f490b4a1d8
+
+
 
